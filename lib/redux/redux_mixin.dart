@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:zuicuo/App.dart';
 import 'package:zuicuo/redux/redux.dart';
 import 'package:flutter/material.dart';
