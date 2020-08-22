@@ -26,7 +26,7 @@ class _VideoDetailPage extends State<VideoDetailPage> {
 
   @override
   void dispose() {
-    player.dispose();
+    player.release();
     super.dispose();
   }
 
