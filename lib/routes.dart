@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 buildRoutes(arg) {
   return {
     '/': (_) => HomePage(),
-    '/video-detail': (_) => VideoDetailPage(joke: arg['detail'])
+    '/video-detail': (_) => VideoDetailPage(joke: arg)
   };
 }
 

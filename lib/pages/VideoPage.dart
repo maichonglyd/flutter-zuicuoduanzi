@@ -57,7 +57,7 @@ class _VideoPage extends State<VideoPage> with ReduxMixin {
   }
 
   _handleClick(Joke item) {
-    Navigator.pushNamed(context, '/video-detail', arguments: {'detail': item});
+    Navigator.pushNamed(context, '/video-detail', arguments: item);
   }
 
   Widget _buildBody() {
