@@ -4,6 +4,7 @@ import 'package:zuicuo/pages/GifPage.dart';
 import 'package:zuicuo/pages/ImagePage.dart';
 import 'package:zuicuo/pages/TextPage.dart';
 import 'package:zuicuo/pages/VideoPage.dart';
+import 'package:zuicuo/r.dart';
 import 'package:zuicuo/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -55,9 +56,9 @@ class _HomePage extends State<HomePage> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: image('images/icon_home.png', rpx(40), rpx(40)),
+            icon: image(R.imagesIconHomePng, rpx(40), rpx(40)),
             activeIcon:
-                image('images/icon_home.png', rpx(40), rpx(40), Colors.blue),
+                image(R.imagesIconHomePng, rpx(40), rpx(40), Colors.blue),
             title: Container(
               padding: spaceTop(SpaceSize.sm),
               child: text('全部',
@@ -66,9 +67,9 @@ class _HomePage extends State<HomePage> {
             ),
           ),
           BottomNavigationBarItem(
-              icon: image('images/icon_video.png', rpx(40), rpx(40)),
+              icon: image(R.imagesIconVideoPng, rpx(40), rpx(40)),
               activeIcon:
-                  image('images/icon_video.png', rpx(40), rpx(40), Colors.blue),
+                  image(R.imagesIconVideoPng, rpx(40), rpx(40), Colors.blue),
               title: Container(
                 padding: spaceTop(SpaceSize.sm),
                 child: text('视频',
@@ -76,9 +77,9 @@ class _HomePage extends State<HomePage> {
                     color: _current == 1 ? FontColor.blue : FontColor.dark),
               )),
           BottomNavigationBarItem(
-              icon: image('images/icon_image.png', rpx(40), rpx(40)),
+              icon: image(R.imagesIconImagePng, rpx(40), rpx(40)),
               activeIcon:
-                  image('images/icon_image.png', rpx(40), rpx(40), Colors.blue),
+                  image(R.imagesIconImagePng, rpx(40), rpx(40), Colors.blue),
               title: Container(
                 padding: spaceTop(SpaceSize.sm),
                 child: text('图文',
@@ -86,9 +87,9 @@ class _HomePage extends State<HomePage> {
                     color: _current == 2 ? FontColor.blue : FontColor.dark),
               )),
           BottomNavigationBarItem(
-              icon: image('images/icon_gif.png', rpx(40), rpx(40)),
+              icon: image(R.imagesIconGifPng, rpx(40), rpx(40)),
               activeIcon:
-                  image('images/icon_gif.png', rpx(40), rpx(40), Colors.blue),
+                  image(R.imagesIconGifPng, rpx(40), rpx(40), Colors.blue),
               title: Container(
                 padding: spaceTop(SpaceSize.sm),
                 child: text('动图',
@@ -96,9 +97,9 @@ class _HomePage extends State<HomePage> {
                     color: _current == 3 ? FontColor.blue : FontColor.dark),
               )),
           BottomNavigationBarItem(
-              icon: image('images/icon_text.png', rpx(40), rpx(40)),
+              icon: image(R.imagesIconTextPng, rpx(40), rpx(40)),
               activeIcon:
-                  image('images/icon_text.png', rpx(40), rpx(40), Colors.blue),
+                  image(R.imagesIconTextPng, rpx(40), rpx(40), Colors.blue),
               title: Container(
                 padding: spaceTop(SpaceSize.sm),
                 child: text('文字',

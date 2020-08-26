@@ -1,5 +1,6 @@
 import 'package:zuicuo/components/BaseItem.dart';
 import 'package:zuicuo/components/baseWidget.dart';
+import 'package:zuicuo/r.dart';
 import 'package:zuicuo/redux/model/Joke.dart';
 import 'package:zuicuo/theme.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class VideoJoke extends StatelessWidget {
                     bottom: 0,
                     top: 0,
                     child: Center(
-                      child: image('images/icon_play.png', rpx(120), rpx(120),
+                      child: image(R.imagesIconPlayPng, rpx(120), rpx(120),
                           BgColor.white),
                     ),
                   )

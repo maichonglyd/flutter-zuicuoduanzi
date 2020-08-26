@@ -2,10 +2,15 @@ import 'package:zuicuo/pages/HomePage.dart';
 import 'package:zuicuo/pages/VideoDetailPage.dart';
 import 'package:flutter/material.dart';
 
+class RouteName {
+  static const String home_page = '/';
+  static const String video_detail_page = '/video-detail';
+}
+
 buildRoutes(arg) {
   return {
-    '/': (_) => HomePage(),
-    '/video-detail': (_) => VideoDetailPage(joke: arg)
+    RouteName.home_page: (_) => HomePage(),
+    RouteName.video_detail_page: (_) => VideoDetailPage(joke: arg['detail'])
   };
 }
 
@@ -22,18 +27,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         //   child: child,
         // );
 
-        // return SlideTransition(
-        //   position: Tween(begin: Offset(1, 0), end: Offset(0, 0)).animate(
-        //       CurvedAnimation(parent: animaton1, curve: Curves.fastOutSlowIn)),
-        //   child: ScaleTransition(
-        //       scale: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-        //           parent: animaton1, curve: Curves.fastOutSlowIn)),
-        //       child: FadeTransition(
-        //         opacity: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-        //             parent: animaton1, curve: Curves.fastOutSlowIn)),
-        //         child: child,
-        //       )),
-        // );
         /// 滑动效果
         return SlideTransition(
           position: Tween(begin: Offset(1, 0), end: Offset(0, 0)).animate(

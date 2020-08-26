@@ -16,7 +16,8 @@ mixin ReduxMixin<T extends StatefulWidget> on State<T> {
   void connect(AppState state) {}
 
   void setData(Function callback) {
-    if (callback != null && this.mounted) {
+    assert(callback != null, 'setData的参数callback不能为空');
+    if (this.mounted) {
       setState(callback);
     }
   }
