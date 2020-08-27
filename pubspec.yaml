@@ -50,6 +50,7 @@ flutter:
     - images/icon_play.png
     - images/icon_text.png
     - images/icon_video.png
+    - images/pic_default.png
     - images/icon_home.png
     - images/icon_gif.png
     # assets end
