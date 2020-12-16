@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:zuicuo/components/EmptyPage.dart';
-import 'package:zuicuo/components/ImageJoke.dart';
 import 'package:zuicuo/components/LoadingPage.dart';
 import 'package:zuicuo/components/ErrorPage.dart';
 import 'package:zuicuo/components/PullDownRefresh.dart';

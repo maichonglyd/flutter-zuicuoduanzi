@@ -65,10 +65,8 @@ AppState success(AppState state, AllJokeListSuccessAction action) {
     list.loaded = true;
     list.error = null;
     if (list.results == null || list.results.length <= 0 || action.refresh) {
-      print('---11111');
       list.results = action.payload;
     } else {
-      print('2222222');
       List<Joke> t = list.results.toList();
       t.addAll(action.payload);
       list.results = t;
@@ -105,7 +103,6 @@ Map allJokeListReducer() {
 allJokeListSaga(Store<AppState> store, dynamic action, NextDispatcher next) {
   next(action);
   if (action.type == ActionType.ALL_JOKE_LIST_REQUEST) {
-    print('----saga  action.refresh ${action.refresh}');
     loadData(store, action);
   }
 }
@@ -126,7 +123,6 @@ loadData(store, AllJokeListRequestAction action) async {
         }
       });
     }
-    print('----action.refresh,${action.refresh ?? false}');
     dispatch(AllJokeListSuccessAction(
         payload: list, refresh: action.refresh ?? false));
   } catch (e) {

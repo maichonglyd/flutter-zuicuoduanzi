@@ -20,7 +20,6 @@ AppState startup(AppState state, StartupAction action) {
 
 AppState updateStartUp(AppState state, StartupAction action) {
   state.startup = action.value;
-  print('---action=$action');
   return state;
 }
 

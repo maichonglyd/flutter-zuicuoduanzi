@@ -56,56 +56,30 @@ class _HomePage extends State<HomePage> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: image(R.imagesIconHomePng, rpx(40), rpx(40)),
-            activeIcon:
-                image(R.imagesIconHomePng, rpx(40), rpx(40), Colors.blue),
-            title: Container(
-              padding: spaceTop(SpaceSize.sm),
-              child: text('全部',
-                  size: FontSize.sm,
-                  color: _current == 0 ? FontColor.blue : FontColor.dark),
-            ),
-          ),
+              icon: image(R.imagesIconHomePng, rpx(40), rpx(40)),
+              activeIcon:
+                  image(R.imagesIconHomePng, rpx(40), rpx(40), Colors.blue),
+              label: '全部'),
           BottomNavigationBarItem(
               icon: image(R.imagesIconVideoPng, rpx(40), rpx(40)),
               activeIcon:
                   image(R.imagesIconVideoPng, rpx(40), rpx(40), Colors.blue),
-              title: Container(
-                padding: spaceTop(SpaceSize.sm),
-                child: text('视频',
-                    size: FontSize.sm,
-                    color: _current == 1 ? FontColor.blue : FontColor.dark),
-              )),
+              label: '视频'),
           BottomNavigationBarItem(
               icon: image(R.imagesIconImagePng, rpx(40), rpx(40)),
               activeIcon:
                   image(R.imagesIconImagePng, rpx(40), rpx(40), Colors.blue),
-              title: Container(
-                padding: spaceTop(SpaceSize.sm),
-                child: text('图文',
-                    size: FontSize.sm,
-                    color: _current == 2 ? FontColor.blue : FontColor.dark),
-              )),
+              label: '图文'),
           BottomNavigationBarItem(
               icon: image(R.imagesIconGifPng, rpx(40), rpx(40)),
               activeIcon:
                   image(R.imagesIconGifPng, rpx(40), rpx(40), Colors.blue),
-              title: Container(
-                padding: spaceTop(SpaceSize.sm),
-                child: text('动图',
-                    size: FontSize.sm,
-                    color: _current == 3 ? FontColor.blue : FontColor.dark),
-              )),
+              label: '动图'),
           BottomNavigationBarItem(
               icon: image(R.imagesIconTextPng, rpx(40), rpx(40)),
               activeIcon:
                   image(R.imagesIconTextPng, rpx(40), rpx(40), Colors.blue),
-              title: Container(
-                padding: spaceTop(SpaceSize.sm),
-                child: text('文字',
-                    size: FontSize.sm,
-                    color: _current == 4 ? FontColor.blue : FontColor.dark),
-              ))
+              label: '文字')
         ],
       ),
     );
