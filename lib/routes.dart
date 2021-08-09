@@ -15,6 +15,7 @@ buildRoutes(arg) {
 }
 
 Route<dynamic> generateRoute(RouteSettings settings) {
+  print('----setting $settings');
   var route = buildRoutes(settings.arguments);
   var builder = route[settings.name];
   return PageRouteBuilder(

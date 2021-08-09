@@ -6,6 +6,55 @@
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 添加快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 移除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- google快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 查询快捷方式 -->
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <!-- 魅蓝3创建快捷方式权限 -->
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <!-- 魅族创建快捷方式权限 -->
+    <uses-permission android:name="com.meizu.flyme.launcher.permission.READ_SETTINGS" />
+    <!-- coolpad创建快捷方式权限 -->
+    <uses-permission android:name="com.yulong.android.launcherL.permission.READ_SETTINGS" />
+    <!-- vivo创建快捷方式权限 -->
+    <uses-permission android:name="com.vivo.launcher.permission.READ_SETTINGS" />
+    <!-- vivo创建快捷方式权限 -->
+    <uses-permission android:name="com.bbk.launcher2.launcher.permission.READ_SETTINGS" />
+    <!-- oppo创建快捷方式权限 -->
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <!-- htc创建快捷方式权限 -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <!-- qiku创建快捷方式权限 -->
+    <uses-permission android:name="com.qiku.launcher.permission.READ_SETTINGS" />
+    <!-- 华为创建快捷方式权限 -->
+    <uses-permission android:name="com.huawei.adnroid.launcher.permission.READ_SETTINGS" />
+    <!-- 中兴创建快捷方式权限 -->
+    <uses-permission android:name="com.zte.mifavor.launcher.permission.READ_SETTINGS" />
+    <!-- 联想创建快捷方式权限 -->
+    <uses-permission android:name="com.lenovo.launcher.permission.READ_SETTINGS" />
+    <!-- google快捷方式 -->
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.yulong.android.launcher3.READ_SETTINGS" />
+    <uses-permission android:name="org.adw.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.qihoo360.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.lge.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="net.qihoo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adwfreak.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="org.adw.launcher_donut.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.fede.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.sec.android.app.twlauncher.settings.READ_SETTINGS" />
+    <uses-permission android:name="com.tencent.qqlauncher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.ebproductions.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.nd.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.yulong.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.mylauncher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.ztemt.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="cn.nubia.launcher.permission.READ_SETTINGS" />
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="最矬段子"
@@ -20,6 +69,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.

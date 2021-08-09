@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:device_info/device_info.dart';
+import 'package:flutter/services.dart';
 import 'package:zuicuo/components/EmptyPage.dart';
 import 'package:zuicuo/components/ImageJoke.dart';
 import 'package:zuicuo/components/LoadingPage.dart';
@@ -25,6 +28,35 @@ class AllPage extends StatefulWidget {
 
 class _AllPage extends State<AllPage> with ReduxMixin {
   RecordPaginate<Joke> jokeList;
+  final platform = MethodChannel('flutter_shortcut_plugin');
+  var stri = '1111111';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _initChannel();
+    deviceInfo();
+  }
+
+  deviceInfo() async {
+    DeviceInfoPlugin di = DeviceInfoPlugin();
+    if (Platform.isAndroid) {
+      AndroidDeviceInfo info = await di.androidInfo;
+      print('------info ${info.brand}');
+    }
+  }
+
+  _initChannel() {
+    platform.setMethodCallHandler((call) async {
+      if (call.method == 'launchType') {
+        String type = call.arguments;
+        if (type == 'pos') {
+          // 跳转
+        }
+      }
+    });
+  }
 
   @override
   void connect(AppState state) {
@@ -87,6 +119,12 @@ class _AllPage extends State<AllPage> with ReduxMixin {
     );
   }
 
+  _sendChannel() async {
+    print('------send channel');
+    var res = await platform.invokeMethod('createIconLauncher');
+    print('-----channel-res $res');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,10 +134,24 @@ class _AllPage extends State<AllPage> with ReduxMixin {
         title: text('全部', color: FontColor.white, size: FontSize.lg),
         centerTitle: true,
       ),
-      body: PullDownRefresh(
-        child: _buildBody(),
-        refresh: this._refresh,
-        loadMore: this._loadMore,
+      body: Column(
+        children: [
+          // Expanded(
+          //     child: GestureDetector(
+          //         onTap: _sendChannel,
+          //         child: Container(
+          //           height: 50,
+          //           color: Colors.green,
+          //         ))),
+          // Text(stri ?? ''),
+          Expanded(
+            child: PullDownRefresh(
+              child: _buildBody(),
+              refresh: this._refresh,
+              loadMore: this._loadMore,
+            ),
+          ),
+        ],
       ),
     );
   }
